@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Room Scent | เปลี่ยนมู้ดห้องให้เป็นเซฟโซนที่ใช่</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Hero Section Specifics */
+    .hero-section {
+      min-height: calc(100vh - 85px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: radial-gradient(circle at 50% 30%, #FFFFFF 0%, var(--bg-primary) 70%);
+      padding: clamp(60px, 10vh, 120px) 0;
+    }
+
+    .hero-content {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .hero-subtitle {
+      font-size: 0.82rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent-bronze);
+      margin-bottom: 24px;
+      display: block;
+    }
+
+    .hero-title {
+      font-size: clamp(2.2rem, 5.2vw, 4rem);
+      font-weight: 300;
+      line-height: 1.35;
+      margin-bottom: 28px;
+      color: var(--text-main);
+    }
+
+    .hero-desc {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      margin-bottom: 44px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      font-weight: 300;
+    }
+
+    /* Mood Grid Section */
+    .section-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 56px;
+    }
+
+    .section-subtitle {
+      font-size: 0.78rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent-bronze);
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .mood-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 28px;
+    }
+
+    .mood-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      padding: 44px 32px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      text-decoration: none;
+      color: inherit;
+      transition: var(--transition-smooth);
+    }
+
+    .mood-card:hover {
+      border-color: var(--accent-gold);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.03);
+    }
+
+    .mood-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .mood-tag-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      display: inline-block;
+      flex-shrink: 0;
+    }
+
+    .mood-tag-dot.fresh   { background-color: var(--mood-fresh); }
+    .mood-tag-dot.relax   { background-color: var(--mood-relax); }
+    .mood-tag-dot.focus   { background-color: var(--mood-focus); }
+    .mood-tag-dot.romance { background-color: var(--mood-romance); }
+
+    .mood-name {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      color: var(--text-main);
+    }
+
+    .mood-accent-line {
+      width: 24px;
+      height: 1.5px;
+      margin-bottom: 20px;
+      transition: width 0.35s ease;
+    }
+
+    .mood-card:hover .mood-accent-line {
+      width: 48px;
+    }
+
+    .mood-accent-line.fresh   { background-color: var(--mood-fresh); }
+    .mood-accent-line.relax   { background-color: var(--mood-relax); }
+    .mood-accent-line.focus   { background-color: var(--mood-focus); }
+    .mood-accent-line.romance { background-color: var(--mood-romance); }
+
+    .mood-card p {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: var(--text-muted);
+      margin-bottom: 28px;
+      flex-grow: 1;
+    }
+
+    .mood-link-text {
+      font-size: 0.78rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-main);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .mood-link-text::after {
+      content: '→';
+      transition: transform 0.25s ease;
+    }
+
+    .mood-card:hover .mood-link-text::after {
+      transform: translateX(4px);
+    }
+
+    /* Footer */
+    footer.site-footer {
+      border-top: 1px solid var(--border-subtle);
+      padding: 48px 0;
+      text-align: center;
+      background-color: var(--bg-primary);
+    }
+
+    footer.site-footer p {
+      font-size: 0.8rem;
+      color: var(--text-light);
+      letter-spacing: 0.05em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Site Navigation -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">Room Scent</a>
+      <nav>
+        <a href="product.html" class="btn btn-outline" style="padding: 9px 22px; font-size: 0.75rem;">คอลเลกชันสินค้า</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-subtitle">Atmospheric Fragrance &amp; Living Scent</span>
+        <h1 class="hero-title">“เปลี่ยนมู้ดห้องให้เป็นเซฟโซนที่ใช่ เติมเต็มทุกฟีลลิ่งของการใช้ชีวิตในแบบคุณ”</h1>
+        <p class="hero-desc">สัมผัสคอลเลกชันสเปรย์ปรับอากาศและเทียนหอมอโรมาที่ออกแบบเพื่อการฟื้นฟูจิตใจ หลีกหนีความวุ่นวาย แล้วกลับคืนสู่ความสงบในพื้นที่ส่วนตัว</p>
+        <a href="product.html" class="btn btn-outline">ดูสินค้าทั้งหมด</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mood Selection Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Curated Atmospheres</span>
+        <h2>ค้นหากลิ่นอายที่เหมาะกับตัวคุณ</h2>
+      </div>
+
+      <div class="mood-grid">
+        <!-- Fresh Card -->
+        <a href="product.html?mood=fresh" class="mood-card">
+          <div class="mood-header">
+            <span class="mood-tag-dot fresh"></span>
+            <span class="mood-name">Fresh</span>
+          </div>
+          <div class="mood-accent-line fresh"></div>
+          <p>ปลุกพลังความสดใสให้ห้องโปร่งโล่ง เติมความกระปรี้กระเปร่าพร้อมลุยทุกโปรเจกต์ใหม่ได้ทั้งวัน</p>
+          <span class="mood-link-text">สำรวจกลิ่น Fresh</span>
+        </a>
+
+        <!-- Relax Card -->
+        <a href="product.html?mood=relax" class="mood-card">
+          <div class="mood-header">
+            <span class="mood-tag-dot relax"></span>
+            <span class="mood-name">Relax</span>
+          </div>
+          <div class="mood-accent-line relax"></div>
+          <p>ทิ้งความเหนื่อยล้าไว้หน้าประตู แล้วทิ้งตัวลงนอนในบรรยากาศแสนสงบที่ชวนให้หลับลึกกว่าที่เคย</p>
+          <span class="mood-link-text">สำรวจกลิ่น Relax</span>
+        </a>
+
+        <!-- Focus Card -->
+        <a href="product.html?mood=focus" class="mood-card">
+          <div class="mood-header">
+            <span class="mood-tag-dot focus"></span>
+            <span class="mood-name">Focus</span>
+          </div>
+          <div class="mood-accent-line focus"></div>
+          <p>ล็อกโฟกัส เคลียร์สมองให้ปลอดโปร่ง ลดความวอกแวก ให้ทุกชั่วโมงของการอ่านหนังสือหรือปั่นงานมีประสิทธิภาพสูงสุด</p>
+          <span class="mood-link-text">สำรวจกลิ่น Focus</span>
+        </a>
+
+        <!-- Romance Card -->
+        <a href="product.html?mood=romance" class="mood-card">
+          <div class="mood-header">
+            <span class="mood-tag-dot romance"></span>
+            <span class="mood-name">Romance</span>
+          </div>
+          <div class="mood-accent-line romance"></div>
+          <p>เนรมิตบรรยากาศละมุนอบอุ่น เติมความหวานชวนฝันให้ทุกช่วงเวลาพิเศษน่าจดจำยิ่งขึ้น</p>
+          <span class="mood-link-text">สำรวจกลิ่น Romance</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Room Scent. All rights reserved. Crafted for mindful living.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

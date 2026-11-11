@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>รายการคำสั่งซื้อ | Room Scent Admin</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .admin-section {
+      padding-top: clamp(40px, 5vw, 64px);
+      padding-bottom: 80px;
+    }
+
+    .admin-header {
+      margin-bottom: 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 20px;
+    }
+
+    .table-container {
+      width: 100%;
+      overflow-x: auto;
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+    }
+
+    #ordersTable {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.88rem;
+    }
+
+    #ordersTable th,
+    #ordersTable td {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border-subtle);
+      white-space: nowrap;
+    }
+
+    #ordersTable th {
+      font-family: var(--font-sans);
+      font-size: 0.76rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      background-color: var(--bg-secondary);
+      font-weight: 500;
+    }
+
+    #ordersTable td {
+      color: var(--text-main);
+      font-weight: 300;
+    }
+
+    #ordersTable tr:last-child td {
+      border-bottom: none;
+    }
+
+    #ordersTable tr:hover td {
+      background-color: rgba(243, 239, 234, 0.4);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Site Navigation -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">Room Scent</a>
+      <nav>
+        <span style="font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-bronze);">Backoffice Dashboard</span>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Admin Table Section -->
+  <main class="admin-section">
+    <div class="container">
+      <div class="admin-header">
+        <div>
+          <h1>รายการคำสั่งซื้อ</h1>
+          <p>ข้อมูลเชื่อมโยงจาก Google Sheets (อัปเดตเรียงจากล่าสุดขึ้นก่อน)</p>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <table id="ordersTable">
+          <thead>
+            <tr>
+              <th>วันเวลา</th>
+              <th>ชื่อลูกค้า</th>
+              <th>เบอร์โทร / Line</th>
+              <th>รายการสินค้า</th>
+              <th>จำนวนเงินรวม</th>
+              <th>หมายเหตุ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- script.js จะนำข้อมูลจาก CSV มาเติมที่นี่ -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

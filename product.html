@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>คอลเลกชันสินค้า | Room Scent</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .catalog-header {
+      text-align: center;
+      padding-top: clamp(48px, 6vw, 84px);
+      padding-bottom: 20px;
+    }
+
+    .catalog-header h1 {
+      margin-bottom: 12px;
+    }
+
+    .catalog-header p {
+      max-width: 540px;
+      margin: 0 auto;
+      font-size: 0.95rem;
+    }
+
+    /* Filter Bar Layout */
+    #filter-bar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 36px 0 20px;
+    }
+
+    .filter-btn {
+      background: transparent;
+      border: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+      padding: 8px 22px;
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: var(--transition-smooth);
+    }
+
+    .filter-btn:hover {
+      border-color: var(--accent-gold);
+      color: var(--text-main);
+    }
+
+    .filter-btn.active {
+      border-color: var(--text-main);
+      background-color: var(--text-main);
+      color: var(--bg-primary);
+    }
+
+    /* Feedback states */
+    .empty-msg, .error-msg {
+      text-align: center;
+      grid-column: 1 / -1;
+      padding: 64px 0;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Site Navigation -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">Room Scent</a>
+      <nav>
+        <a href="index.html" class="btn btn-outline" style="padding: 9px 22px; font-size: 0.75rem;">หน้าแรก</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Product Catalog Section -->
+  <main class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="catalog-header">
+        <h1>คอลเลกชันกลิ่นอาย</h1>
+        <p>เลือกสรรสเปรย์ปรับอากาศและเทียนหอมตามระดับอารมณ์ที่คุณต้องการ</p>
+      </div>
+
+      <!-- Filter Controls (Populated & controlled by script.js) -->
+      <div id="filter-bar"></div>
+
+      <!-- Product Cards Container (Populated & controlled by script.js) -->
+      <div id="product-list" class="product-grid"></div>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" style="border-top: 1px solid var(--border-subtle); padding: 48px 0; text-align: center; background-color: var(--bg-primary);">
+    <div class="container">
+      <p style="font-size: 0.8rem; color: var(--text-light); letter-spacing: 0.05em;">&copy; 2026 Room Scent. All rights reserved. Crafted for mindful living.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

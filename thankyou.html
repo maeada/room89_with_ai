@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ขอบคุณสำหรับคำสั่งซื้อ | Room Scent</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .thankyou-wrapper {
+      min-height: calc(100vh - 85px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .thankyou-card {
+      max-width: 580px;
+      padding: clamp(40px, 6vw, 64px) 32px;
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+    }
+
+    .thankyou-card h1 {
+      margin-bottom: 20px;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+    }
+
+    .accent-symbol {
+      display: inline-block;
+      width: 40px;
+      height: 1px;
+      background-color: var(--accent-bronze);
+      margin-bottom: 28px;
+    }
+
+    .thankyou-card p {
+      font-size: 0.98rem;
+      line-height: 1.8;
+      margin-bottom: 36px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Site Navigation -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">Room Scent</a>
+    </div>
+  </header>
+
+  <!-- Confirmation Message -->
+  <main class="thankyou-wrapper">
+    <div class="thankyou-card">
+      <span class="accent-symbol"></span>
+      <h1>เราได้รับคำสั่งซื้อแล้ว</h1>
+      <p>
+        ขอบคุณที่ร่วมแบ่งปันความสุขและเลือก Room Scent ให้เป็นส่วนหนึ่งในสเปซของคุณ<br>
+        เราจะตรวจสอบรายละเอียดและดำเนินการติดต่อกลับเพื่อเตรียมจัดส่งสินค้าโดยเร็ว
+      </p>
+      <a href="index.html" class="btn btn-outline">กลับสู่หน้าแรก</a>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+[
+  {
+    "id": "spray-fresh-30",
+    "name": "Room Spray Fresh",
+    "mood": "fresh",
+    "type": "spray",
+    "size": "30ml",
+    "price": 89,
+    "image": "images/fresh.jpg",
+    "description": "กลิ่นสะอาดสดชื่น ผสานไอความโปร่งสบาย ปลุกสัมผัสให้มีชีวิตชีวาในทุกเช้าวันใหม่"
+  },
+  {
+    "id": "spray-fresh-100",
+    "name": "Room Spray Fresh",
+    "mood": "fresh",
+    "type": "spray",
+    "size": "100ml",
+    "price": 199,
+    "image": "images/fresh.jpg",
+    "description": "กลิ่นสะอาดสดชื่น ผสานไอความโปร่งสบาย ปลุกสัมผัสให้มีชีวิตชีวาในทุกเช้าวันใหม่"
+  },
+  {
+    "id": "spray-relax-30",
+    "name": "Room Spray Relax",
+    "mood": "relax",
+    "type": "spray",
+    "size": "30ml",
+    "price": 89,
+    "image": "images/relax.jpg",
+    "description": "ความผ่อนคลายลุ่มลึก ปลดเปลื้องความเหนื่อยล้าเพื่อการพักผ่อนอย่างแท้จริง"
+  },
+  {
+    "id": "spray-relax-100",
+    "name": "Room Spray Relax",
+    "mood": "relax",
+    "type": "spray",
+    "size": "100ml",
+    "price": 199,
+    "image": "images/relax.jpg",
+    "description": "ความผ่อนคลายลุ่มลึก ปลดเปลื้องความเหนื่อยล้าเพื่อการพักผ่อนอย่างแท้จริง"
+  },
+  {
+    "id": "spray-focus-30",
+    "name": "Room Spray Focus",
+    "mood": "focus",
+    "type": "spray",
+    "size": "30ml",
+    "price": 89,
+    "image": "images/focus.jpg",
+    "description": "โทนกลิ่นสุขุมคมชัด เสริมสมาธิและความนิ่งเงียบให้ช่วงเวลาแห่งการทำงาน"
+  },
+  {
+    "id": "spray-focus-100",
+    "name": "Room Spray Focus",
+    "mood": "focus",
+    "type": "spray",
+    "size": "100ml",
+    "price": 199,
+    "image": "images/focus.jpg",
+    "description": "โทนกลิ่นสุขุมคมชัด เสริมสมาธิและความนิ่งเงียบให้ช่วงเวลาแห่งการทำงาน"
+  },
+  {
+    "id": "spray-romance-30",
+    "name": "Room Spray Romance",
+    "mood": "romance",
+    "type": "spray",
+    "size": "30ml",
+    "price": 89,
+    "image": "images/romance.jpg",
+    "description": "ไออุ่นละมุนเย้ายวน สร้างมิติบรรยากาศอบอุ่นและมีเสน่ห์น่าค้นหา"
+  },
+  {
+    "id": "spray-romance-100",
+    "name": "Room Spray Romance",
+    "mood": "romance",
+    "type": "spray",
+    "size": "100ml",
+    "price": 199,
+    "image": "images/romance.jpg",
+    "description": "ไออุ่นละมุนเย้ายวน สร้างมิติบรรยากาศอบอุ่นและมีเสน่ห์น่าค้นหา"
+  },
+  {
+    "id": "candle-relax",
+    "name": "เทียนหอม Relax",
+    "mood": "relax",
+    "type": "candle",
+    "size": "60g",
+    "price": 149,
+    "image": "images/relax.jpg",
+    "description": "เปลวเทียนอบอุ่นพร้อมกลิ่นอโรมาละมุน ช่วยปลอบประโลมจิตใจยามค่ำคืน"
+  },
+  {
+    "id": "candle-romance",
+    "name": "เทียนหอม Romance",
+    "mood": "romance",
+    "type": "candle",
+    "size": "60g",
+    "price": 149,
+    "image": "images/romance.jpg",
+    "description": "ประกายไฟนุ่มนวลและไอหอมชวนฝัน เพิ่มความพิเศษให้ทุกห้วงเวลาอันใกล้ชิด"
+  }
+]

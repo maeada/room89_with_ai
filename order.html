@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>สั่งซื้อสินค้า | Room Scent</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .order-section {
+      padding-top: clamp(48px, 6vw, 84px);
+      padding-bottom: 96px;
+    }
+
+    .order-card {
+      max-width: 640px;
+      margin: 0 auto;
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      padding: clamp(32px, 5vw, 56px);
+    }
+
+    .order-header {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .order-header h1 {
+      margin-bottom: 8px;
+    }
+
+    .order-header p {
+      font-size: 0.9rem;
+    }
+
+    .form-group {
+      margin-bottom: 24px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-main);
+      margin-bottom: 8px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 16px;
+      font-family: var(--font-sans);
+      font-size: 0.92rem;
+      color: var(--text-main);
+      background-color: var(--bg-primary);
+      border: 1px solid var(--border-subtle);
+      border-radius: 0;
+      transition: var(--transition-smooth);
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--accent-gold);
+      background-color: #FFFFFF;
+    }
+
+    .form-group input[readonly] {
+      background-color: var(--bg-secondary);
+      color: var(--text-muted);
+      cursor: not-allowed;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 16px;
+    }
+
+    .submit-btn {
+      width: 100%;
+      margin-top: 12px;
+      padding: 16px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 580px) {
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Site Navigation -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">Room Scent</a>
+      <nav>
+        <a href="product.html" class="btn btn-outline" style="padding: 9px 22px; font-size: 0.75rem;">เลือกสินค้าเพิ่ม</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Order Form Section -->
+  <main class="order-section">
+    <div class="container">
+      <div class="order-card">
+        <div class="order-header">
+          <h1>ยืนยันคำสั่งซื้อ</h1>
+          <p>กรอกข้อมูลเพื่อให้เราจัดส่งความรื่นรมย์ถึงมือคุณ</p>
+        </div>
+
+        <form id="orderForm">
+          <div class="form-group">
+            <label for="customerName">ชื่อ - นามสกุล ผู้รับ *</label>
+            <input type="text" id="customerName" name="customerName" required placeholder="ระบุชื่อจริงและนามสกุล">
+          </div>
+
+          <div class="form-group">
+            <label for="contact">เบอร์โทรศัพท์ / LINE ID *</label>
+            <input type="text" id="contact" name="contact" required placeholder="เช่น 0812345678 หรือ line_id">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="items">รายการสินค้าที่เลือก</label>
+              <input type="text" id="items" name="items" readonly required>
+            </div>
+
+            <div class="form-group">
+              <label for="total">ยอดรวม (บาท)</label>
+              <input type="text" id="total" name="total" readonly required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="note">ที่อยู่สำหรับจัดส่ง / รายละเอียดเพิ่มเติม</label>
+            <textarea id="note" name="note" rows="3" placeholder="ระบุที่อยู่จัดส่ง หรือรายละเอียดความต้องการพิเศษ"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary submit-btn">ยืนยันสั่งซื้อ</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" style="border-top: 1px solid var(--border-subtle); padding: 48px 0; text-align: center; background-color: var(--bg-primary);">
+    <div class="container">
+      <p style="font-size: 0.8rem; color: var(--text-light); letter-spacing: 0.05em;">© 2026 Room Scent. All rights reserved. Crafted for mindful living.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
